@@ -1,18 +1,20 @@
 import { test, expect } from '@playwright/test';
+import { env } from 'process';
+import test_data from '../test-data/test_data.json';
+import dotenv from 'dotenv';
+dotenv.config();
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+const username = process.env.USERNAME;
+const password = process.env.PASSWORD;
+
+
+test('login', async ({ page }) => {
+  await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
+  await page.getByRole('textbox', { name: 'Username' }).fill(username!);
+  await page.getByRole('textbox', { name: 'Password' }).fill(password!);
+  await page.getByRole('button', { name: 'Sign in' }).click();
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+  await expect(page).toHaveTitle("Vite + React + TS");
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
