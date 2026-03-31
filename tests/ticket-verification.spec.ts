@@ -8,7 +8,7 @@ const username = process.env.USERNAME;
 const password = process.env.PASSWORD;
 
 
-test('login', async ({ page }) => {
+test('ticket verifications', async ({ page }) => {
   await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
   await page.getByRole('textbox', { name: 'Username' }).fill(username!);
   await page.getByRole('textbox', { name: 'Password' }).fill(password!);
