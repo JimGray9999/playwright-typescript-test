@@ -9,11 +9,11 @@ const password = process.env.PASSWORD;
 
 
 test('ticket verifications', async ({ page }) => {
+  // Login app
   await page.goto('https://animated-gingersnap-8cf7f2.netlify.app/');
   await page.getByRole('textbox', { name: 'Username' }).fill(username!);
   await page.getByRole('textbox', { name: 'Password' }).fill(password!);
   await page.getByRole('button', {name: 'Sign in' }).click();
-
 
   // assertions
   // Expect the page title to match
@@ -21,13 +21,12 @@ test('ticket verifications', async ({ page }) => {
 
   // Expect the tags, ticket name, column name to match for each value in the test data
   for (const ticket of test_data.ticket_name_test) {
-    await expect(page.getByRole('heading', { name: ticket.title })).toBeVisible();
+    const ticketTitle = page.getByRole('heading', { name: ticket.title });
+
+    await expect(ticketTitle).toBeVisible();
     for (const tag of ticket.tags) {
       await expect(page.getByText(tag).first()).toBeVisible();
     }
   }
-
-
-
 });
 
