@@ -1,6 +1,21 @@
 {
-    "login_test": {
-        "username": "testuser",
-        "password": "testpassword"
-    }
+    "ticket_name_test": [
+        {
+            "id": "Implement user authentication ticket present",
+            "description": "The ticket with the name Implement user authentication is present under the To Do column.",
+            "column": "To Do",
+            "title": "Implement user authentication",
+            "tags": ["High Priority", "Feature"],
+            "Assignee": "Sarah Chen",
+            "Date": "03-24-2024"
+        },
+        {
+            "id": "Fix naviation bug ticket present",
+            "description":"The ticket with the name Fix navigation bug is present under the To Do column.",
+            "column":"To Do",
+            "title": "Fix navigation bug",
+            "tags": ["Bug"],
+            "Date":"03-19-2024"
+        }
+    ]
 }
