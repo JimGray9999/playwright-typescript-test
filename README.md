@@ -1,11 +1,57 @@
 # Playwright Test Project
 
-Test project demonstrating the use of Playwright automation on a sample site.
+Test project demonstrating the use of Playwright automation on a sample site. Written in Typescript with NodeJS.
 
-test_data.json = all of the test data needed for assertions are saved here, so they can iterate through each 
+Test site - https://animated-gingersnap-8cf7f2.netlify.app/
 
-# AI Assistance
+```text
+.
+├── .github/workflows
+│   └── playwright.yml - handles test runs in Github Actions
+├── node_modules
+├── playwright-report
+│   └── index.html - report generator
+├── test-data
+│   └── test_data.json - test data to update when need to add new cases
+├── test-results
+└── tests
+│   └── ticket-verification.spec.ts - spec file of tests to run
+├── .env - environment variables, only saved locally
+├── .gitignore 
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── playwright.config.ts - configuration for browsers in test runs
+├── README.md
+```
 
-Utilized Claude Code and Cursor:
-- review specific errors
-- update code blocks with prompt requests
+
+`test_data.json` = all of the test data needed for assertions are saved here, so they can iterate through each 
+
+## AI Assistance (Claude Code and Cursor)
+
+Claude Code:
+- reviewed specific errors found when running tests
+    - Claude Code would update the code and provide explanations in responses
+- updated code blocks with prompt requests
+
+Cursor:
+- used as the primary IDE for code development
+- updated code blocks with prompt requests, agent would make changes based on the prompt
+
+## Resources:
+
+Playwright documentation - https://playwright.dev/docs/intro
+
+## How to run:
+1. Clone repo locally
+2. Run `npm install` to installed required node modules
+3. To run (headless with all three browsers: Chromium, Firefox, Webkit (Safari))
+    `npx playwright test`
+    This is the default state
+    Headless - Browsers run without a visible GUI, quicker performance
+    Headed - Browsers run visible to the user, good for visual demonstration and debugging
+        `npx playwright test --headed`
+    
+    Run on a specific browser only:
+    `npx playwright test --project=chromium` (replace chromium with firefox or webkit for alternatives)
