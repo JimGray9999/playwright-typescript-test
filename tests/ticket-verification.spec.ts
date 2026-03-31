@@ -15,19 +15,19 @@ test('ticket verifications', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Password' }).fill(password!);
   await page.getByRole('button', {name: 'Sign in' }).click();
 
-  // assertions
   // Expect the page title to match
   await expect(page).toHaveTitle("Vite + React + TS");
 
   // Expect the tags, ticket name, column name to match for each value in the test data
   for (const ticket of test_data.ticket_verificiation_test_data) {
+    // test data setup
     const ticketTitle = page.getByRole('heading', { name: ticket.title });
     const ticketCard = ticketTitle.locator('xpath=..');
     const ticketsColumn = ticketCard.locator('xpath=..');
     const columnContainer = ticketsColumn.locator('xpath=..');
     const projectName = page.getByRole('button', { name: ticket.project });
 
-    // expects the tag to be inside of the specific ticket it is a part of
+    // test verifications
     await projectName.click();
     await expect(ticketTitle).toBeVisible();
     await expect(columnContainer.getByRole('heading', { name: ticket.column })).toBeVisible();
