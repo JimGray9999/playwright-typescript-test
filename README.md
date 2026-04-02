@@ -2,6 +2,8 @@
 
 Test project demonstrating the use of Playwright automation on a sample site. Written in Typescript with NodeJS.
 
+**Requirements:** Node.js 18+
+
 Test site - [https://animated-gingersnap-8cf7f2.netlify.app/](https://animated-gingersnap-8cf7f2.netlify.app/)
 
 ```text
@@ -16,7 +18,7 @@ Test site - [https://animated-gingersnap-8cf7f2.netlify.app/](https://animated-g
 ├── test-results
 └── tests
 │   └── ticket-verification.spec.ts - spec file of tests to run
-├── .env - environment variables, only saved locally
+├── .env.example - environment variable template, rename to .env and fill in credentials
 ├── .gitignore 
 ├── LICENSE
 ├── package-lock.json
@@ -48,9 +50,10 @@ Cursor:
 
 1. Clone the repo locally
 2. Run `npm install` to install required node modules
-3. rename `.env.example to` `.env`
+3. Run `npx playwright install` to install browser binaries
+4. rename `.env.example` to `.env`
     add your username and password where the placeholder text is
-4. To run (headless with all three browsers: Chromium, Firefox, Webkit (Safari))
+5. To run (headless with all three browsers: Chromium, Firefox, Webkit (Safari))
   `npx playwright test`  
     This is the default state  
     Headless - Browsers run without a visible GUI, with quicker performance  
@@ -58,4 +61,6 @@ Cursor:
         `npx playwright test --headed`
     Run on a specific browser only:
     `npx playwright test --project=chromium` (replace chromium with firefox or webkit for alternatives)
+6. To view the HTML report after a test run:
+  `npx playwright show-report`
 
