@@ -1,5 +1,5 @@
 {
-    "ticket_verificiation_test_data": [
+    "ticket_verification_test_data": [
         {
             "id": "Implement user authentication ticket present",
             "description": "The ticket with the name Implement user authentication is present under the To Do column.",

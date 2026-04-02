@@ -20,12 +20,10 @@ Test site - [https://animated-gingersnap-8cf7f2.netlify.app/](https://animated-g
 ├── .gitignore 
 ├── LICENSE
 ├── package-lock.json
-├── package.json
+├── package.json - list of NPM packages required to install
 ├── playwright.config.ts - configuration for browsers in test runs
 ├── README.md
 ```
-
-`test_data.json` = all of the test data needed for assertions are saved here, so they can iterate through each 
 
 ## AI Assistance (Claude Code and Cursor)
 
@@ -50,7 +48,9 @@ Cursor:
 
 1. Clone the repo locally
 2. Run `npm install` to install required node modules
-3. To run (headless with all three browsers: Chromium, Firefox, Webkit (Safari))
+3. rename `.env.example to` `.env`
+    add your username and password where the placeholder text is
+4. To run (headless with all three browsers: Chromium, Firefox, Webkit (Safari))
   `npx playwright test`  
     This is the default state  
     Headless - Browsers run without a visible GUI, with quicker performance  
