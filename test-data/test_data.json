@@ -2,61 +2,45 @@
     "ticket_verification_test_data": [
         {
             "id": "Implement user authentication ticket present",
-            "description": "The ticket with the name Implement user authentication is present under the To Do column.",
             "project": "Web Application Main web",
             "column": "To Do",
             "title": "Implement user authentication",
-            "tags": ["High Priority", "Feature"],
-            "Assignee": "Sarah Chen",
-            "Date": "03-24-2024"
+            "tags": ["High Priority", "Feature"]
         },
         {
-            "id": "Fix naviation bug ticket present",
-            "description":"The ticket with the name Fix navigation bug is present under the To Do column.",
+            "id": "Fix navigation bug ticket present",
             "project": "Web Application Main web",
-            "column":"To Do",
+            "column": "To Do",
             "title": "Fix navigation bug",
-            "tags": ["Bug"],
-            "Date": "03-19-2024"
+            "tags": ["Bug"]
         },
         {
             "id": "Design system updates",
-            "description":"The ticket with the name Design system updates is present under the In Progress column.",
             "project": "Web Application Main web",
-            "column":"In Progress",
+            "column": "In Progress",
             "title": "Design system updates",
-            "tags": ["Design"],
-            "Date": "03-21-2024"
+            "tags": ["Design"]
         },
         {
             "id": "Push notification system",
-            "description":"The ticket with the name Push notification system is present under the Mobile Application Project, In Progress column.",
             "project": "Mobile Application Native",
-            "column":"To Do",
+            "column": "To Do",
             "title": "Push notification system",
-            "tags": ["Feature"],
-            "Assignee": "David Kim",
-            "Date": "03-27-2024"
+            "tags": ["Feature"]
         },
         {
             "id": "Offline mode",
-            "description":"The ticket with the name Offline mode is present under the Mobile Application Project, In Progress column.",
             "project": "Mobile Application Native",
-            "column":"In Progress",
+            "column": "In Progress",
             "title": "Offline mode",
-            "tags": ["Feature", "High Priority"],
-            "Assignee": "Rachel Green",
-            "Date": "03-23-2024"
+            "tags": ["Feature", "High Priority"]
         },
         {
             "id": "App icon design",
-            "description":"The ticket with the name App icon design is present under the Mobile Application Project, Done column.",
             "project": "Mobile Application Native",
-            "column":"Done",
+            "column": "Done",
             "title": "App icon design",
-            "tags": ["Design"],
-            "Assignee": "Emma Wilson",
-            "Date": "03-14-2024"
+            "tags": ["Design"]
         }
     ]
 }

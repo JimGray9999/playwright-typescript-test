@@ -13,7 +13,6 @@
   "license": "ISC",
   "author": "Jim Gray",
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
@@ -21,9 +20,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.5.0"
-  },
-  "dependencies": {
+    "@types/node": "^25.5.0",
     "dotenv": "^17.3.1"
   }
 }

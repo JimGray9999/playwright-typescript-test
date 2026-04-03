@@ -10,16 +10,13 @@ Test site - [https://animated-gingersnap-8cf7f2.netlify.app/](https://animated-g
 .
 ├── .github/workflows
 │   └── playwright.yml - handles test runs in Github Actions
-├── node_modules
-├── playwright-report
-│   └── index.html - report generator
 ├── test-data
 │   └── test_data.json - test data to update when need to add new cases
-├── test-results
-└── tests
+├── tests
 │   └── ticket-verification.spec.ts - spec file of tests to run
 ├── .env.example - environment variable template, rename to .env and fill in credentials
-├── .gitignore 
+├── .gitignore
+├── global-setup.ts - handles login once before all tests and saves session state
 ├── LICENSE
 ├── package-lock.json
 ├── package.json - list of NPM packages required to install
@@ -63,4 +60,13 @@ Cursor:
     `npx playwright test --project=chromium` (replace chromium with firefox or webkit for alternatives)
 6. To view the HTML report after a test run:
   `npx playwright show-report`
+
+## CI/CD (GitHub Actions)
+
+Tests run automatically on push and pull requests to `main`/`master`. The workflow uses GitHub repository secrets for credentials — these must be configured before CI runs will pass:
+
+- `USERNAME` — the app login username
+- `PASSWORD` — the app login password
+
+To add secrets: **GitHub repo → Settings → Secrets and variables → Actions → New repository secret**
 
