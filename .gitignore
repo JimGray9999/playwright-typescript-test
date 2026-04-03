@@ -8,3 +8,6 @@ node_modules/
 
 # Environment variables
 .env
+
+# Auth state (contains session cookies, do not commit)
+storageState.json
